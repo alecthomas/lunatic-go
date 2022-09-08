@@ -22,12 +22,10 @@ spawn: func(
   params-len: u32,
   id: u32,
 ) -> u32
-drop-process: func(process-id: u64)
-clone-process: func(process-id: u64) -> u64
 sleep-ms: func(millis: u64)
 die-when-link-dies: func(trap: u32)
-this: func() -> u64
-id: func(process-id: u64, uuid: u32)
+process-id: func() -> u64
+environment-id: func() -> u64
 link: func(tag: s64, process-id: u64)
 unlink: func(process-id: u64)
 kill: func(process-id: u64)

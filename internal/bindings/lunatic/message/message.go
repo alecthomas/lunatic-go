@@ -1,43 +1,43 @@
 package message
 
 //go:wasm-module lunatic::message
-//go:export create-data
+//go:export create_data
 func CreateData(tag int64, capacity uint64)
 
 //go:wasm-module lunatic::message
-//go:export write-data
+//go:export write_data
 func WriteData(data uint32, dataLen uint32) uint32
 
 //go:wasm-module lunatic::message
-//go:export read-data
+//go:export read_data
 func ReadData(data uint32, dataLen uint32) uint32
 
 //go:wasm-module lunatic::message
-//go:export seek-data
+//go:export seek_data
 func SeekData(position uint64)
 
 //go:wasm-module lunatic::message
-//go:export get-tag
+//go:export get_tag
 func GetTag() int64
 
 //go:wasm-module lunatic::message
-//go:export data-size
+//go:export data_size
 func DataSize() uint64
 
 //go:wasm-module lunatic::message
-//go:export push-process
+//go:export push_process
 func PushProcess(processId uint64) uint64
 
 //go:wasm-module lunatic::message
-//go:export take-process
+//go:export take_process
 func TakeProcess(index uint64) uint64
 
 //go:wasm-module lunatic::message
-//go:export push-tcp-stream
+//go:export push_tcp_stream
 func PushTcpStream(tcpStreamId uint64) uint64
 
 //go:wasm-module lunatic::message
-//go:export take-tcp-stream
+//go:export take_tcp_stream
 func TakeTcpStream(index uint64) uint64
 
 //go:wasm-module lunatic::message
@@ -45,7 +45,7 @@ func TakeTcpStream(index uint64) uint64
 func Send(processId uint64)
 
 //go:wasm-module lunatic::message
-//go:export send-receive-skip-search
+//go:export send_receive_skip_search
 func SendReceiveSkipSearch(processId uint64, timeout uint32) uint32
 
 //go:wasm-module lunatic::message

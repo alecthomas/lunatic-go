@@ -1,59 +1,59 @@
 package process
 
 //go:wasm-module lunatic::process
-//go:export compile-module
+//go:export compile_module
 func CompileModule(data uint32, dataLen uint32, id uint32) int32
 
 //go:wasm-module lunatic::process
-//go:export drop-module
+//go:export drop_module
 func DropModule(configId uint64)
 
 //go:wasm-module lunatic::process
-//go:export create-config
+//go:export create_config
 func CreateConfig() uint64
 
 //go:wasm-module lunatic::process
-//go:export drop-config
+//go:export drop_config
 func DropConfig(configId uint64)
 
 //go:wasm-module lunatic::process
-//go:export config-set-max-memory
+//go:export config_set_max_memory
 func ConfigSetMaxMemory(configId uint64, maxMemory uint64)
 
 //go:wasm-module lunatic::process
-//go:export config-get-max-memory
+//go:export config_get_max_memory
 func ConfigGetMaxMemory(configId uint64) uint64
 
 //go:wasm-module lunatic::process
-//go:export config-set-max-fuel
+//go:export config_set_max_fuel
 func ConfigSetMaxFuel(configId uint64, maxFuel uint64)
 
 //go:wasm-module lunatic::process
-//go:export config-get-max-fuel
+//go:export config_get_max_fuel
 func ConfigGetMaxFuel(configId uint64) uint64
 
 //go:wasm-module lunatic::process
-//go:export config-can-compile-modules
+//go:export config_can_compile_modules
 func ConfigCanCompileModules(configId uint64) uint32
 
 //go:wasm-module lunatic::process
-//go:export config-set-can-compile-modules
+//go:export config_set_can_compile_modules
 func ConfigSetCanCompileModules(configId uint64, can uint32)
 
 //go:wasm-module lunatic::process
-//go:export config-can-create-configs
+//go:export config_can_create_configs
 func ConfigCanCreateConfigs(configId uint64) uint32
 
 //go:wasm-module lunatic::process
-//go:export config-set-can-create-configs
+//go:export config_set_can_create_configs
 func ConfigSetCanCreateConfigs(configId uint64, can uint32)
 
 //go:wasm-module lunatic::process
-//go:export config-can-spawn-processes
+//go:export config_can_spawn_processes
 func ConfigCanSpawnProcesses(configId uint64) uint32
 
 //go:wasm-module lunatic::process
-//go:export config-set-can-spawn-processes
+//go:export config_set_can_spawn_processes
 func ConfigSetCanSpawnProcesses(configId uint64, can uint32)
 
 //go:wasm-module lunatic::process
@@ -61,28 +61,20 @@ func ConfigSetCanSpawnProcesses(configId uint64, can uint32)
 func Spawn(link int64, configId int64, moduleId int64, function uint32, functionLen uint32, params uint32, paramsLen uint32, id uint32) uint32
 
 //go:wasm-module lunatic::process
-//go:export drop-process
-func DropProcess(processId uint64)
-
-//go:wasm-module lunatic::process
-//go:export clone-process
-func CloneProcess(processId uint64) uint64
-
-//go:wasm-module lunatic::process
-//go:export sleep-ms
+//go:export sleep_ms
 func SleepMs(millis uint64)
 
 //go:wasm-module lunatic::process
-//go:export die-when-link-dies
+//go:export die_when_link_dies
 func DieWhenLinkDies(trap uint32)
 
 //go:wasm-module lunatic::process
-//go:export this
-func This() uint64
+//go:export process_id
+func ProcessId() uint64
 
 //go:wasm-module lunatic::process
-//go:export id
-func Id(processId uint64, uuid uint32)
+//go:export environment_id
+func EnvironmentId() uint64
 
 //go:wasm-module lunatic::process
 //go:export link

@@ -1,0 +1,23 @@
+nodes-count                : func() -> u32
+get-nodes                  : func(nodes-ptr: u32, nodes-len: u32) -> u32
+node-id                    : func() -> u64
+module-id                  : func() -> u64
+spawn                      : func(
+  node-id: u64,
+  config-id: s64,
+  module-id: u64,
+  func-str-ptr: u32,
+  func-str-len: u32,
+  params-ptr: u32,
+  params-len: u32,
+  id-ptr: u32,
+) -> u32
+send                       : func(
+  node-id: u64,
+  process-id: u64,
+)
+send-receive-skip-search   : func(
+  node-id: u64,
+  process-id: u64,
+  timeout-duration: u64,
+) -> u32

@@ -11,6 +11,7 @@
   - [ ] Process
   - [ ] Registry
   - [ ] Timer
+  - [ ] Distributed
 
 ## Developing
 
